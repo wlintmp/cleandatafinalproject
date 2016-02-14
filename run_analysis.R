@@ -51,8 +51,6 @@ for(iii in unique(alldata$user)) {
   for(jjj in unique(alldata$activity)) {
     for(kkk in unique(alldata$measurement)) {
       print(iii)
-      print(jjj)
-      print(kkk)
       tmp<-filter(alldata,user==iii,activity==jjj,measurement==kkk)
       final<-rbind(final,data.frame(user=iii,activity=typedef[jjj],measurement=kkk,mean=mean(tmp$meas),std=sd(tmp$meas)))
     }

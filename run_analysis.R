@@ -56,4 +56,23 @@ for(iii in unique(alldata$user)) {
     }
   }
 }
+row.names(final)<-NULL
 write.table(final,file="final.txt",row.name=FALSE)
+
+final2 <- data.frame(user=integer(),activity=character(),acc.x.mean=numeric(),acc.y.mean=numeric(),acc.z.mean=numeric(),gyro.x.mean=numeric(),gyro.y.mean=numeric(),gyro.z.mean=numeric())
+
+for(iii in unique(final$user)) {
+  for(jjj in unique(final$activity)) {
+      final2<-rbind(final2,data.frame(user=iii,activity=jjj,
+      acc.x.mean=filter(final,user==iii,activity==jjj,measurement=="acc.x")$mean,
+      acc.y.mean=filter(final,user==iii,activity==jjj,measurement=="acc.y")$mean,
+      acc.z.mean=filter(final,user==iii,activity==jjj,measurement=="acc.z")$mean,
+      gyro.x.mean=filter(final,user==iii,activity==jjj,measurement=="gyro.x")$mean,
+      gyro.y.mean=filter(final,user==iii,activity==jjj,measurement=="gyro.y")$mean,
+      gyro.z.mean=filter(final,user==iii,activity==jjj,measurement=="gyro.z")$mean
+                                     )
+      )
+    }
+}
+
+write.table(final2,file="final2.txt",row.name=FALSE)

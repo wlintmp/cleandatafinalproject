@@ -12,7 +12,7 @@ user<-rbind(read.table(".\\UCI HAR Dataset\\train\\subject_train.txt"),
 activity<-rbind(read.table(".\\UCI HAR Dataset\\train\\y_train.txt"),
                 read.table(".\\UCI HAR Dataset\\test\\y_test.txt"))
 
-colnames(user)<-"user_id"
+colnames(user)<-"subject_id"
 colnames(activity)<-"activity"
 colnames(data)<-cnames
 
@@ -26,12 +26,11 @@ data<-cbind(user,activity,data)
 
 write.table(data,file="data1.txt",row.name=FALSE,quote=FALSE)
 
-tmp<-aggregate(data,list(data$user_id,data$activity),mean)
+data2<-aggregate(data,list(data$subject_id,data$activity),mean)
+data2$subject_id<-NULL
+data2$activity<-NULL
 
-tmp$user_id<-NULL
-tmp$activity<-NULL
+colnames(data2)[1]<-"subject_id"
+colnames(data2)[2]<-"activity"
 
-colnames(tmp)[1]<-"user_id"
-colnames(tmp)[2]<-"activity"
-
-write.table(tmp,file="data2.txt",row.name=FALSE,quote=FALSE)
+write.table(data2,file="data2.txt",row.name=FALSE,quote=FALSE)

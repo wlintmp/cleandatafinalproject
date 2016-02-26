@@ -5,8 +5,8 @@
 //Mag: magnitute
 
 "subject_id": the id number of the subject.
-"activity": the subject's activity
-"tBodyAcc-mean()-X"              
+"activity": the subject's activity.
+"tBodyAcc-mean()-X"
 "tBodyAcc-mean()-Y"
 "tBodyAcc-mean()-Z"
 "tBodyAcc-std()-X"               

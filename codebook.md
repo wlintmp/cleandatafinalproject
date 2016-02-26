@@ -1,8 +1,11 @@
-//The column names are self-explaining.
-//Acc: acceleration
-//Gyro: gyrometer
-//std: standard deviation
-//Mag: magnitute
+The column names are already self-explaining:
+t: time-domain
+f: frequency domain
+Acc: acceleration
+Gyro: gyrometer
+std: standard deviation
+Mag: magnitute
+Freq: frequency
 
 "subject_id": the id number of the subject.
 "activity": the subject's activity.
@@ -68,20 +71,20 @@
 "fBodyGyro-mean()-Y"            
 "fBodyGyro-mean()-Z"             
 "fBodyGyro-std()-X"           
-"fBodyGyro-std()-Y"           
-"fBodyGyro-std()-Z"              
-"fBodyGyro-meanFreq()-X"       
-"fBodyGyro-meanFreq()-Y"       
-"fBodyGyro-meanFreq()-Z"         
-"fBodyAccMag-mean()"           
-"fBodyAccMag-std()"           
-"fBodyAccMag-meanFreq()"         
-"fBodyBodyAccJerkMag-mean()"     
-"fBodyBodyAccJerkMag-std()"      
-"fBodyBodyAccJerkMag-meanFreq()" 
-"fBodyBodyGyroMag-mean()"      
-"fBodyBodyGyroMag-std()"         
-"fBodyBodyGyroMag-meanFreq()"    
-"fBodyBodyGyroJerkMag-mean()"  
-"fBodyBodyGyroJerkMag-std()"     
+"fBodyGyro-std()-Y"
+"fBodyGyro-std()-Z"
+"fBodyGyro-meanFreq()-X"
+"fBodyGyro-meanFreq()-Y"
+"fBodyGyro-meanFreq()-Z"
+"fBodyAccMag-mean()"
+"fBodyAccMag-std()"
+"fBodyAccMag-meanFreq()"
+"fBodyBodyAccJerkMag-mean()"
+"fBodyBodyAccJerkMag-std()"
+"fBodyBodyAccJerkMag-meanFreq()"
+"fBodyBodyGyroMag-mean()"
+"fBodyBodyGyroMag-std()"
+"fBodyBodyGyroMag-meanFreq()"
+"fBodyBodyGyroJerkMag-mean()"
+"fBodyBodyGyroJerkMag-std()"
 "fBodyBodyGyroJerkMag-meanFreq()"

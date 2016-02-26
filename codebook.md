@@ -1,21 +1,29 @@
 The column names are already self-explaining:
-t: time-domain
-f: frequency domain
-Acc: acceleration
-Gyro: gyrometer
-std: standard deviation
-Mag: magnitute
-Freq: frequency
 
+t: time-domain
+
+f: frequency domain
+
+Acc: acceleration
+
+Gyro: gyrometer
+
+std: standard deviation
+
+Mag: magnitute
+
+Freq: frequency
 "subject_id": the id number of the subject.
 "activity": the subject's activity.
 "tBodyAcc-mean()-X"
 "tBodyAcc-mean()-Y"
 "tBodyAcc-mean()-Z"
-"tBodyAcc-std()-X"               
+"tBodyAcc-std()-X"
+
 "tBodyAcc-std()-Y"
+
 "tBodyAcc-std()-Z"
-"tGravityAcc-mean()-X"           
+"tGravityAcc-mean()-X"
 "tGravityAcc-mean()-Y"
 "tGravityAcc-mean()-Z"
 "tGravityAcc-std()-X"            
